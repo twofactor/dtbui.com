@@ -44,7 +44,7 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a target="_blank" href="david@dtbui.com">
+            <a target="_blank" href="mailto:david@dtbui.com">
               Contact Me
             </a>
           </li>
