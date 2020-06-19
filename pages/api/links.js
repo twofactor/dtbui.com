@@ -3,6 +3,7 @@
 const links = [
   { title: "Home", link: "/" },
   { title: "Twitter", link: "https://twitter.com/ghosttyped" },
+  { title: "Github", link: "https://github.com/twofactor" },
   { title: "Minecraft", link: "https://www.powhattan.org/" },
   { title: "Contact Me", link: "mailto:david@dtbui.com" },
 ];
