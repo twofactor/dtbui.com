@@ -1,6 +1,10 @@
 import Head from "next/head";
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import useSWR from "swr";
+
+const fetcher = (url) => fetch(url).then((r) => r.json());
 
 const Container = styled.div`
   font-family: "Comic Sans MS", sans-serif;
@@ -10,7 +14,18 @@ const AnimatedLink = (props) => (
   <motion.a whileHover={{ y: -10 }} whileTap={{ scale: 0.9 }} {...props} />
 );
 
+const listanimation = { hidden: { opacity: 0 } };
+const itemanimation = { hidden: { x: -10, opacity: 0 } };
+
 export default function Home() {
+  const [links, setLinks] = useState();
+
+  const { data, error } = useSWR("/api/links", fetcher);
+
+  useEffect(() => {
+    setLinks(data);
+  }, [data]);
+
   return (
     <Container>
       <Head>
@@ -28,27 +43,19 @@ export default function Home() {
         </p>
 
         <hr />
-
-        <ul>
-          <li>
-            <AnimatedLink href="/">Home</AnimatedLink>
-          </li>
-          <li>
-            <a target="_blank" href="https://twitter.com/ghosttyped">
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.powhattan.org/">
-              Minecraft
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="mailto:david@dtbui.com">
-              Contact Me
-            </a>
-          </li>
-        </ul>
+        <motion.ul>
+          {links ? (
+            links.map((link) => (
+              <motion.li key={link.link}>
+                <a target="_blank" href={link.link}>
+                  {link.title}
+                </a>
+              </motion.li>
+            ))
+          ) : (
+            <h1>Loading...</h1>
+          )}
+        </motion.ul>
       </main>
     </Container>
   );
