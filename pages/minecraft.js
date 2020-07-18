@@ -98,11 +98,19 @@ export default function Minecraft() {
 
           <Box height="96px" />
 
-          <Image
-            borderRadius="24px"
-            boxShadow="lg"
-            src="/minecraft/cityhall.jpg"
-          />
+          <motion.div
+            style={{ width: "100%" }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ scale: 1, y: 0, opacity: 1 }}
+            exit={{ scale: 0.5, opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <Image
+              borderRadius="24px"
+              boxShadow="lg"
+              src="/minecraft/cityhall.jpg"
+            />
+          </motion.div>
 
           <Box height="64px" />
         </Box>
