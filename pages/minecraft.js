@@ -20,9 +20,9 @@ export default function Minecraft() {
   return (
     <ThemeProvider>
       <Head>
-        <title>Dtbui Minecraft Server</title>
-        <link rel="icon" href="/minecraft/favicon.png" />
-        <meta property="og:title" content="minecraft.dtbui Server" />
+        <title>PufferCraft Server</title>
+        <link rel="icon" href="/minecraft/pufferfish.png" />
+        <meta property="og:title" content="PufferCraft Server" />
         <meta
           property="og:description"
           content="A simple, wholesome, and fun vanilla survivial server."
@@ -30,7 +30,7 @@ export default function Minecraft() {
         <meta property="og:image" content="/minecraft/hangout.png" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:text:title" content="minecraft.dtbui Server" />
+        <meta name="twitter:text:title" content="PufferCraft Server" />
         <meta name="twitter:image" content="/minecraft/hangout.png" />
         <meta property="og:url" content="https://www.dtbui.com/minecraft" />
       </Head>
@@ -53,7 +53,7 @@ export default function Minecraft() {
           alignItems="center"
         >
           <Link href="/minecraft">
-            <Code fontWeight="bold">minecraft.dtbui</Code>
+            <Code fontWeight="bold">PufferCraft</Code>
           </Link>
           <Flex flexGrow="1" />
           <Button
@@ -79,8 +79,8 @@ export default function Minecraft() {
             The Best Minecraft Server On The Internet.
           </Heading>
           <Text fontSize="lg" mb="24px">
-            The <Code fontWeight="bold">minecraft.dtbui</Code> server is a
-            simple, wholesome and fun mostly vanilla survivial server.
+            The <Code fontWeight="bold">PufferCraft</Code> server is a simple,
+            wholesome and fun mostly vanilla survivial server.
           </Text>
 
           <Button
@@ -168,7 +168,7 @@ export default function Minecraft() {
                   Pure Vanilla
                 </Heading>
                 <Text>
-                  <Code fontWeight="bold">minecraft.dtbui</Code> is strictly a
+                  <Code fontWeight="bold">PufferCraft</Code> is strictly a
                   vanilla survival server, enabling us to continue to innovate
                   and find new, creative ways to play the game as it was meant
                   to be played. This means no one gets any special advantages
@@ -194,9 +194,9 @@ export default function Minecraft() {
                 <Text>
                   As a continuous successor to our founding team's original
                   Minecraft server over 10 years ago, the{" "}
-                  <Code fontWeight="bold">minecraft.dtbui</Code> server carries
-                  on a long and storied tradition of active, tight, and
-                  incredibly ambitious vanilla survival Minecraft servers.
+                  <Code fontWeight="bold">PufferCraft</Code> server carries on a
+                  long and storied tradition of active, tight, and incredibly
+                  ambitious vanilla survival Minecraft servers.
                 </Text>
               </Box>
             </Flex>
@@ -215,7 +215,7 @@ export default function Minecraft() {
               Our Community
             </Heading>
             <Text fontSize="lg" mb="24px">
-              The <Code fontWeight="bold">minecraft.dtbui</Code> community is a
+              The <Code fontWeight="bold">PufferCraft</Code> community is a
               warm, mature, kind community that enjoys hanging out with and
               building cool, ambitious projects together.
             </Text>
@@ -276,6 +276,22 @@ export default function Minecraft() {
               boxShadow="md"
               maxHeight="260px"
               src="/minecraft/tudor.png"
+            />
+            <Image
+              borderRadius="16px"
+              mr="16px"
+              mb="16px"
+              boxShadow="md"
+              maxHeight="260px"
+              src="/minecraft/rainynight.png"
+            />
+            <Image
+              borderRadius="16px"
+              mr="16px"
+              mb="16px"
+              boxShadow="md"
+              maxHeight="260px"
+              src="/minecraft/bar.png"
             />
           </Flex>
         </Box>
