@@ -80,7 +80,7 @@ export default function Minecraft() {
           </Heading>
           <Text fontSize="lg" mb="24px">
             The <Code fontWeight="bold">PufferCraft</Code> server is a simple,
-            wholesome and fun mostly vanilla survivial server.
+            wholesome and fun mostly vanilla survival server.
           </Text>
 
           <Button
