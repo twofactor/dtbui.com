@@ -4,7 +4,7 @@ const links = [
   { title: "Home", link: "/" },
   { title: "Twitter", link: "https://twitter.com/ghosttyped" },
   { title: "Github", link: "https://github.com/twofactor" },
-  { title: "Minecraft", link: "https://www.powhattan.org/" },
+  { title: "Minecraft", link: "https://www.dtbui.com/minecraft" },
   { title: "Contact Me", link: "mailto:uselestufdb@gmail.com" },
 ];
 
