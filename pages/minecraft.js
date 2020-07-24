@@ -304,8 +304,7 @@ export default function Minecraft() {
               Join us today!
             </Heading>
             <Text fontSize="md" mb="24px">
-              Simply hop on the discord and DM{" "}
-              <Code fontWeight="bold">@twofactor</Code> for the Server IP.
+              Simply hop on the discord and introduce yourself!
             </Text>
             <Button
               as="a"
