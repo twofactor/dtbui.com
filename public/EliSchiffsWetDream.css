@@ -1,0 +1,390 @@
+/* 
+# Custom Texts Styles
+This file will be injected as a <style> tag
+Some default variables have been included
+After making your changes, select "Reload custom CSS" in the command bar
+*/
+
+/* core */
+
+body {
+  background: #f3f5f8;
+  box-shadow: inset 0px 0.5px 0px rgba(255, 255, 255, 1),
+    inset 0px 4px 12px rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  font-family: "Helvetica Neue", sans-serif !important;
+}
+
+#root {
+  border-radius: 0;
+  border: none;
+}
+
+.left {
+  min-width: 340px;
+}
+
+.right {
+  background: #fafbfd;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
+    0px 4px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+}
+
+/* tab bar */
+
+.tab-bar-container {
+  background: linear-gradient(180deg, #fbfbfc 0%, #f3f5f8 100%);
+  box-shadow: 0px 0px 0px 1px #e1e5ea, 0px 1px 0px 1px #fbfbfc,
+    inset 0px 1px 0px #ffffff, inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  max-height: 32px;
+  margin-top: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.tab-bar-container svg {
+  margin-top: 9px;
+  color: #5e646e;
+}
+
+.tab-bar {
+  margin: 0;
+}
+
+.tab-bar button {
+  margin: none;
+  border-right: 1px solid #e1e5ea;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #5e646e;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.tab-bar button.selected {
+  margin: none;
+  border: none;
+  background: linear-gradient(180deg, #6a7381 0%, #515e70 100%);
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.16), inset 0px 0px 0px 1px #48505b,
+    inset 0px 2px 0px #818c9d, inset 0px -1px 0px #e1e5ea;
+  border-radius: 6px;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0px -1px 0px rgba(72, 80, 91, 0.5);
+}
+
+/* threads */
+
+.threads .thread {
+  box-shadow: inset 0px 1px 0px #e1e5ea, inset 0px 2px 0px #ffffff;
+}
+
+.threads .thread .middle .title {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #393e46;
+
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.threads .thread .middle .msg-preview {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #454b54;
+
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+.threads .thread .timestamp {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #454b54;
+
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+.threads .thread.selected {
+  background: linear-gradient(180deg, #6a7381 0%, #515e70 100%);
+  box-shadow: 0px 1px 0px #ffffff, inset 0px -1px 0px #48505b,
+    inset 0px 1px 0px #48505b, inset 0px 2px 0px #818c9d,
+    inset 0px -1px 0px #e1e5ea;
+}
+
+.threads {
+  cursor: default !important;
+}
+
+.threads .thread {
+  cursor: default;
+}
+
+.threads .selected:hover {
+  background: linear-gradient(180deg, #6a7381 0%, #515e70 100%);
+  cursor: default;
+}
+
+.threads .selected .img,
+.threads .img {
+  width: 42px;
+  height: 42px;
+}
+
+.threads .selected .img img {
+  background: url(image.png);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.48);
+  filter: drop-shadow(0px 1px 0px rgba(255, 255, 255, 0.16));
+  border-radius: 100px;
+}
+
+.threads .selected .middle .title {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ffffff;
+
+  text-shadow: 0px -1px 0px #48505b;
+}
+
+.threads .selected .middle .msg-preview {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #e5eaf0;
+
+  text-shadow: 0px -1px 0px rgba(72, 80, 91, 0.5);
+}
+
+.threads .selected .timestamp {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  text-shadow: 0px -1px 0px rgba(72, 80, 91, 0.7);
+}
+
+.right-pane-header {
+  background: #fafbfd;
+  box-shadow: inset 0px -1px 0px #f0f2f4;
+  border-radius: 12px 0px 0px 0px;
+}
+
+.messages-list-container {
+  background: #fafbfd;
+  box-shadow: inset 0px 1px 0px #ffffff;
+}
+
+.message-container:hover,
+.message-container.is-selected {
+  border-color: #fafbfd;
+  background-color: #fafbfd;
+}
+
+.bubble-mode .message-container .contents {
+  background: linear-gradient(180deg, #eceff3 0%, #e1e4ea 100%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px #cacfd8,
+    inset 1px 2px 0px #f6f7f9;
+
+  border-radius: 16px 16px 16px 16px;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #393e46;
+
+  text-shadow: 0px 1px 0px #f6f7f9;
+}
+
+.type-action {
+  display: none;
+}
+
+.bubble-mode .is-sender .contents {
+  background: linear-gradient(180deg, #9f7aff 0%, #2541f4 100%) !important;
+  box-shadow: 0px 2px 4px rgba(131, 101, 246, 0.24),
+    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.3),
+    inset 0px -4px 6px rgba(0, 0, 0, 0.2),
+    inset 1px 2px 0px rgba(255, 255, 255, 0.23);
+  border-radius: 16px 16px 16px 16px;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #ffffff;
+
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.24);
+}
+
+/* composer */
+.compose-message {
+  background: #fafbfd;
+}
+
+.compose-message .compose-text {
+  background: #ffffff;
+  box-shadow: 0px 1px 0px #ffffff, inset 0px 0px 0px 1px #d1d6dc,
+    inset 0px 1px 2px #e1e5ea;
+  border-radius: 16px;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #454b54;
+
+  text-shadow: 0px 1px 0px #f6f7f9;
+}
+
+.compose-message .compose-text textarea {
+  border: none;
+  background: none;
+}
+
+.emoji-picker svg {
+  color: #454b54;
+}
+
+/*
+  
+  #root,
+  .message,
+  .compose-text {
+  } */
+
+/* messages */
+/* .messages-list-container {
+    background-color: #fff;
+  }
+  
+  .bubble-mode .message-container .contents {
+    background-color: #f3f3f3 !important;
+    font-weight: 400;
+    padding: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 20px;
+  }
+  
+  .bubble-mode .is-sender .contents {
+    background-color: #4198f7 !important;
+    font-weight: 400;
+    padding: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 20px;
+  } */
+
+/*compooser*/
+/* .compose-message {
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 2px -3px rgba(0, 0, 0, 0.06);
+  }
+  
+  .compose-text textarea {
+    background: #f3f3f3;
+    border: none;
+  } */
+/* command */
+
+:root {
+  /* --error-color: #f44336; */
+
+  /* --color-bg: white; */
+  /* --color-bg-rgb: 255, 255, 255; */
+  --color-fg: #454b54;
+  /* --color-fg-rgb: 0, 0, 0; */
+  /* --color-primary: rgb(33, 150, 243); */
+  /* --color-primary-rgb: 33, 150, 243; */
+
+  /* --offline-indicator-bg: rgba(var(--color-fg-rgb), .5); */
+  /* --offline-indicator-fg: var(--color-bg); */
+
+  /* --app-status-bg: rgba(var(--color-fg-rgb), .1); */
+  /* --app-status-fg: var(--color-fg); */
+
+  /* --mark-bg: rgb(255, 235, 59); */
+
+  /* --message-bg: rgba(128, 128, 128, .1); */
+  /* --message-selected-bg: rgba(128, 128, 128, .1); */
+  /* --message-sent-bg: var(--color-primary); */
+  /* --message-sent-fg: white; */
+
+  /* --snoozed-indicator-bg: rgb(255, 152, 0); */
+  /* --message-snoozed-bg: transparent; */
+  /* --message-snoozed-border: rgb(255, 152, 0); */
+
+  /* --muted-color: gray; */
+
+  /* --message-delivering-beacon: rgba(var(--color-primary-rgb), .5); */
+  /* --message-errored-beacon: var(--error-color); */
+
+  /* --sms-sent-bg: rgb(76, 175, 80); */
+
+  /* --compose-textarea-bg: var(--color-bg); */
+  /* --compose-textarea-fg: var(--color-fg); */
+
+  /* --thread-selected-bg: rgba(var(--color-bg-rgb), .5); */
+
+  /* --thread-header-bg: transparent; */
+  /* --messages-list-bg: rgba(var(--color-bg-rgb), .8); */
+  /* --compose-message-bg: rgba(var(--color-bg-rgb), .8); */
+
+  /* --modal-container-bg: rgba(0, 0, 0, .2); */
+  /* --modal-bg: rgba(var(--color-bg-rgb), .8); */
+
+  /* --command-bar-bg: rgba(0, 0, 0, .8); */
+  /* --command-bar-fg: white; */
+  /* --command-bar-command-highlighted-bg: rgba(255, 255, 255, .2); */
+  /* --command-bar-command-selected-bg: rgba(255, 255, 255, .5); */
+  /* --command-bar-category-bg: rgba(255, 255, 255, .8); */
+  /* --command-bar-category-fg: black; */
+}
