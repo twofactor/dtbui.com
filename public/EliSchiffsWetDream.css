@@ -208,6 +208,27 @@ body {
   border-radius: 12px 0px 0px 0px;
 }
 
+.thread-title {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 2px;
+  color: #393e46;
+}
+
+.participants {
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #454b54;
+}
+
 .messages-list-container {
   background: #fafbfd;
   box-shadow: inset 0px 1px 0px #ffffff;
@@ -293,46 +314,46 @@ body {
 }
 
 /*
-  
-  #root,
-  .message,
-  .compose-text {
-  } */
+
+#root,
+.message,
+.compose-text {
+} */
 
 /* messages */
 /* .messages-list-container {
-    background-color: #fff;
-  }
-  
-  .bubble-mode .message-container .contents {
-    background-color: #f3f3f3 !important;
-    font-weight: 400;
-    padding: 8px;
-    padding-left: 14px;
-    padding-right: 14px;
-    border-radius: 20px;
-  }
-  
-  .bubble-mode .is-sender .contents {
-    background-color: #4198f7 !important;
-    font-weight: 400;
-    padding: 8px;
-    padding-left: 14px;
-    padding-right: 14px;
-    border-radius: 20px;
-  } */
+  background-color: #fff;
+}
+
+.bubble-mode .message-container .contents {
+  background-color: #f3f3f3 !important;
+  font-weight: 400;
+  padding: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 20px;
+}
+
+.bubble-mode .is-sender .contents {
+  background-color: #4198f7 !important;
+  font-weight: 400;
+  padding: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 20px;
+} */
 
 /*compooser*/
 /* .compose-message {
-    background: #ffffff;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0px 2px -3px rgba(0, 0, 0, 0.06);
-  }
-  
-  .compose-text textarea {
-    background: #f3f3f3;
-    border: none;
-  } */
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 2px -3px rgba(0, 0, 0, 0.06);
+}
+
+.compose-text textarea {
+  background: #f3f3f3;
+  border: none;
+} */
 /* command */
 
 :root {
