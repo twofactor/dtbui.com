@@ -147,13 +147,13 @@ body {
   cursor: default;
 }
 
-.threads .selected:hover {
+.threads .thread.selected:hover {
   background: linear-gradient(180deg, #6a7381 0%, #515e70 100%);
   cursor: default;
 }
 
 .threads .selected .img,
-.threads .img {
+.left .thread .img {
   width: 42px;
   height: 42px;
 }
@@ -314,46 +314,46 @@ body {
 }
 
 /*
-
-#root,
-.message,
-.compose-text {
-} */
+  
+  #root,
+  .message,
+  .compose-text {
+  } */
 
 /* messages */
 /* .messages-list-container {
-  background-color: #fff;
-}
-
-.bubble-mode .message-container .contents {
-  background-color: #f3f3f3 !important;
-  font-weight: 400;
-  padding: 8px;
-  padding-left: 14px;
-  padding-right: 14px;
-  border-radius: 20px;
-}
-
-.bubble-mode .is-sender .contents {
-  background-color: #4198f7 !important;
-  font-weight: 400;
-  padding: 8px;
-  padding-left: 14px;
-  padding-right: 14px;
-  border-radius: 20px;
-} */
+    background-color: #fff;
+  }
+  
+  .bubble-mode .message-container .contents {
+    background-color: #f3f3f3 !important;
+    font-weight: 400;
+    padding: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 20px;
+  }
+  
+  .bubble-mode .is-sender .contents {
+    background-color: #4198f7 !important;
+    font-weight: 400;
+    padding: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 20px;
+  } */
 
 /*compooser*/
 /* .compose-message {
-  background: #ffffff;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 2px -3px rgba(0, 0, 0, 0.06);
-}
-
-.compose-text textarea {
-  background: #f3f3f3;
-  border: none;
-} */
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 2px -3px rgba(0, 0, 0, 0.06);
+  }
+  
+  .compose-text textarea {
+    background: #f3f3f3;
+    border: none;
+  } */
 /* command */
 
 :root {
