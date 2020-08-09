@@ -26,12 +26,12 @@ export default function Minecraft() {
         <meta property="og:title" content="PufferCraft Server" />
         <meta
           property="og:description"
-          content="A simple, wholesome, and fun vanilla survivial server."
+          content="Live updates for the Puffercraft Server including who's online!"
         />
         <meta property="og:image" content="/minecraft/hangout.png" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:text:title" content="PufferCraft Server" />
+        <meta name="twitter:text:title" content="PufferCraft Dashboard" />
         <meta name="twitter:image" content="/minecraft/hangout.png" />
         <meta property="og:url" content="https://www.dtbui.com/minecraft" />
       </Head>
