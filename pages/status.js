@@ -90,14 +90,14 @@ export default function Minecraft() {
   );
 }
 
-const ServerStatus = {
+const ServerStatusEnum = {
   UNKNOWN: 0,
   ONLINE: 1,
   OFFLINE: 2
 }
 
 function ServerStatus() {
-  const [online, setOnline] = useState(ServerStatus.UNKNOWN);
+  const [online, setOnline] = useState(ServerStatusEnum.UNKNOWN);
   const [players, setPlayers] = useState();
 
   useEffect(() => {
@@ -106,11 +106,11 @@ function ServerStatus() {
         const res = await fetch("/api/minecraft");
         const serverStatus = await res.json();
         if (res.ok) {
-          setOnline(serverStatus.online ? ServerStatus.ONLINE : ServerStatus.OFFLINE);
+          setOnline(serverStatus.online ? ServerStatusEnum.ONLINE : ServerStatusEnum.OFFLINE);
           setPlayers(serverStatus.players);
         } else {
           //if error, default to no users shown/found state
-          setOnline(ServerStatus.OFFLINE);
+          setOnline(ServerStatusEnum.OFFLINE);
           setPlayers([]);
         }
       } catch (e) {
@@ -130,10 +130,10 @@ function ServerStatus() {
     >
       <Flex alignItems="center" mb="12px">
         <Heading size="xl" mr="12px" mb="8px">
-          Server Status: {online ? "Online" : "Offline"}
+          Server Status: {online === ServerStatusEnum.ONLINE ? "Online" : online === ServerStatusEnum.ONLINE ? "Offline" : ""}
         </Heading>
         {(() => {
-          if (online === ServerStatus.ONLINE) {
+          if (online === ServerStatusEnum.ONLINE) {
             return (
               <Box
                 width="24px"
@@ -142,7 +142,7 @@ function ServerStatus() {
                 backgroundColor="green.500"
               />
             );
-          } else if (online === ServerStatus.OFFLINE) {
+          } else if (online === ServerStatusEnum.OFFLINE) {
             return (
               <Box
                 width="24px"
@@ -157,7 +157,7 @@ function ServerStatus() {
         })()}
       </Flex>
 
-      {online !== ServerStatus.UNKNOWN ? 
+      {online !== ServerStatusEnum.UNKNOWN ? 
         players ? (
           <>
             <Text fontSize="md" mb="12px">
