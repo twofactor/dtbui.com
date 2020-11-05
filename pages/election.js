@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>David Bui's Homepage</title>
+        <title>Is Biden President Yet</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
