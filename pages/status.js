@@ -90,8 +90,14 @@ export default function Minecraft() {
   );
 }
 
+const ServerStatusEnum = {
+  UNKNOWN: 0,
+  ONLINE: 1,
+  OFFLINE: 2
+}
+
 function ServerStatus() {
-  const [online, setOnline] = useState();
+  const [online, setOnline] = useState(ServerStatusEnum.UNKNOWN);
   const [players, setPlayers] = useState();
 
   useEffect(() => {
@@ -100,11 +106,11 @@ function ServerStatus() {
         const res = await fetch("/api/minecraft");
         const serverStatus = await res.json();
         if (res.ok) {
-          setOnline(serverStatus.online);
+          setOnline(serverStatus.online ? ServerStatusEnum.ONLINE : ServerStatusEnum.OFFLINE);
           setPlayers(serverStatus.players);
         } else {
           //if error, default to no users shown/found state
-          setOnline([]);
+          setOnline(ServerStatusEnum.OFFLINE);
           setPlayers([]);
         }
       } catch (e) {
@@ -124,46 +130,57 @@ function ServerStatus() {
     >
       <Flex alignItems="center" mb="12px">
         <Heading size="xl" mr="12px" mb="8px">
-          Server Status: {online ? "Online" : "Offline"}
+          Server Status: {online === ServerStatusEnum.ONLINE ? "Online" : online === ServerStatusEnum.ONLINE ? "Offline" : ""}
         </Heading>
-        {online ? (
-          <Box
-            width="24px"
-            height="24px"
-            borderRadius="100px"
-            backgroundColor="green.500"
-          />
-        ) : (
-          <Box
-            width="24px"
-            height="24px"
-            borderRadius="100px"
-            backgroundColor="red.500"
-          />
-        )}
+        {(() => {
+          if (online === ServerStatusEnum.ONLINE) {
+            return (
+              <Box
+                width="24px"
+                height="24px"
+                borderRadius="100px"
+                backgroundColor="green.500"
+              />
+            );
+          } else if (online === ServerStatusEnum.OFFLINE) {
+            return (
+              <Box
+                width="24px"
+                height="24px"
+                borderRadius="100px"
+                backgroundColor="red.500"
+              />
+            );
+          } else {
+            return null;
+          }
+        })()}
       </Flex>
 
-      {players ? (
-        <>
-          <Text fontSize="md" mb="12px">
-            {players.length} active players:
+      {online !== ServerStatusEnum.UNKNOWN ? 
+        players ? (
+          <>
+            <Text fontSize="md" mb="12px">
+              {players.length} active players:
+            </Text>
+            {players.map((player) => {
+              return (
+                <Flex alignItems="center" mb="12px">
+                  <Avatar mr="12px" size="sm" src={player.profile} />
+                  <Text fontWeight="bold" fontSize="lg">
+                    {player.player}
+                  </Text>
+                </Flex>
+              );
+            })}
+          </>
+        ) : (
+          <Text fontSize="md" mb="24px">
+            No Active Players
           </Text>
-          {players.map((player) => {
-            return (
-              <Flex alignItems="center" mb="12px">
-                <Avatar mr="12px" size="sm" src={player.profile} />
-                <Text fontWeight="bold" fontSize="lg">
-                  {player.player}
-                </Text>
-              </Flex>
-            );
-          })}
-        </>
       ) : (
-        <Text fontSize="md" mb="24px">
-          No Active Players
-        </Text>
-      )}
+        <></>
+    )}
     </motion.div>
   );
 }
