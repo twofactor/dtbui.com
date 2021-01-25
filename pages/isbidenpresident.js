@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import {
-  ThemeProvider,
+  ChakraProvider,
   CSSReset,
   Flex,
   Box,
@@ -12,14 +12,14 @@ import {
   Image,
   Code,
   Avatar,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import { Users, Cloud, Award } from "react-feather";
 
 export default function Minecraft() {
   return (
-    <ThemeProvider>
+    <ChakraProvider>
       <Head>
         <title>PufferCraft Dashboard</title>
         <link rel="icon" href="/minecraft/pufferfish.png" />
@@ -86,7 +86,7 @@ export default function Minecraft() {
           <Box height="64px" />
         </Box>
       </Box>
-    </ThemeProvider>
+    </ChakraProvider>
   );
 }
 

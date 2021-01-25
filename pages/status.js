@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import {
-  ThemeProvider,
+  ChakraProvider,
   CSSReset,
   Flex,
   Box,
@@ -12,14 +12,14 @@ import {
   Image,
   Code,
   Avatar,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import { Users, Cloud, Award } from "react-feather";
 
 export default function Minecraft() {
   return (
-    <ThemeProvider>
+    <ChakraProvider>
       <Head>
         <title>PufferCraft Dashboard</title>
         <link rel="icon" href="/minecraft/pufferfish.png" />
@@ -86,15 +86,15 @@ export default function Minecraft() {
           <Box height="64px" />
         </Box>
       </Box>
-    </ThemeProvider>
+    </ChakraProvider>
   );
 }
 
 const ServerStatusEnum = {
   UNKNOWN: 0,
   ONLINE: 1,
-  OFFLINE: 2
-}
+  OFFLINE: 2,
+};
 
 function ServerStatus() {
   const [online, setOnline] = useState(ServerStatusEnum.UNKNOWN);
@@ -106,7 +106,11 @@ function ServerStatus() {
         const res = await fetch("/api/minecraft");
         const serverStatus = await res.json();
         if (res.ok) {
-          setOnline(serverStatus.online ? ServerStatusEnum.ONLINE : ServerStatusEnum.OFFLINE);
+          setOnline(
+            serverStatus.online
+              ? ServerStatusEnum.ONLINE
+              : ServerStatusEnum.OFFLINE
+          );
           setPlayers(serverStatus.players);
         } else {
           //if error, default to no users shown/found state
@@ -130,7 +134,12 @@ function ServerStatus() {
     >
       <Flex alignItems="center" mb="12px">
         <Heading size="xl" mr="12px" mb="8px">
-          Server Status: {online === ServerStatusEnum.ONLINE ? "Online" : online === ServerStatusEnum.ONLINE ? "Offline" : ""}
+          Server Status:{" "}
+          {online === ServerStatusEnum.ONLINE
+            ? "Online"
+            : online === ServerStatusEnum.ONLINE
+            ? "Offline"
+            : ""}
         </Heading>
         {(() => {
           if (online === ServerStatusEnum.ONLINE) {
@@ -157,7 +166,7 @@ function ServerStatus() {
         })()}
       </Flex>
 
-      {online !== ServerStatusEnum.UNKNOWN ? 
+      {online !== ServerStatusEnum.UNKNOWN ? (
         players ? (
           <>
             <Text fontSize="md" mb="12px">
@@ -178,9 +187,10 @@ function ServerStatus() {
           <Text fontSize="md" mb="24px">
             No Active Players
           </Text>
+        )
       ) : (
         <></>
-    )}
+      )}
     </motion.div>
   );
 }
