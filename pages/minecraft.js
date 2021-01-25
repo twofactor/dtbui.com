@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import {
-  ThemeProvider,
+  ChakraProvider,
   CSSReset,
   Flex,
   Box,
@@ -11,14 +11,14 @@ import {
   Link,
   Image,
   Code,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import { Users, Cloud, Award } from "react-feather";
 
 export default function Minecraft() {
   return (
-    <ThemeProvider>
+    <ChakraProvider>
       <Head>
         <title>PufferCraft Server</title>
         <link rel="icon" href="/minecraft/pufferfish.png" />
@@ -60,7 +60,7 @@ export default function Minecraft() {
             size="sm"
             borderRadius="12px"
             boxShadow="sm"
-            variantColor="purple"
+            colorScheme="purple"
             border="1px solid"
             borderColor="purple.600"
             as="a"
@@ -89,7 +89,7 @@ export default function Minecraft() {
             target="_blank"
             borderRadius="16px"
             boxShadow="sm"
-            variantColor="purple"
+            colorScheme="purple"
             border="1px solid"
             borderColor="purple.600"
           >
@@ -312,7 +312,7 @@ export default function Minecraft() {
               target="_blank"
               borderRadius="16px"
               boxShadow="sm"
-              variantColor="purple"
+              colorScheme="purple"
               border="1px solid"
               borderColor="purple.600"
             >
@@ -322,6 +322,6 @@ export default function Minecraft() {
           </Box>
         </Box>
       </Box>
-    </ThemeProvider>
+    </ChakraProvider>
   );
 }
