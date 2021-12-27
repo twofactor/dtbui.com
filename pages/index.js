@@ -1,25 +1,157 @@
 import Head from "next/head";
+import React, { useEffect } from "react";
+import {
+  ChakraProvider,
+  CSSReset,
+  Flex,
+  Box,
+  Heading,
+  Text,
+  Button,
+  Link,
+  Image,
+  Code,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  useEffect(() => {
+    document.querySelector("body").style.background = "#002451";
+  }, []);
+
   return (
-    <div>
+    <ChakraProvider>
       <Head>
-        <title>Error 420</title>
-        <meta property="og:title" content="Error 420" />
-        <meta property="og:description" content="No website was found here." />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <meta property="og:image" content="" />
+        <title>About | David Bui</title>
+        <meta property="og:title" content="About | David Bui" />
+        <meta
+          property="og:description"
+          content="Hi! I’m David and this is my personal website."
+        />
+        <link rel="icon" type="image/png" href="/faviconBlue.png" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:text:title" content="Error 420" />
       </Head>
-      <h1>
-        <a href="#">420 error</a>: Website not found
-      </h1>
-      <p>
-        No website was found here. Maybe you should explore other parts of the
-        World Wide Web instead?
-      </p>
-    </div>
+
+      <CSSReset />
+      <Box
+        width="100%"
+        backgroundColor="#002451"
+        height="100vh"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Flex
+          maxWidth="664px"
+          padding="32px"
+          flexDirection={["column", "column", "row", "row"]}
+        >
+          <Box paddingRight="64px">
+            <Link
+              fontFamily="Space Mono, Monospace"
+              color="#BCDAFF"
+              href="/"
+              _active={{
+                color: "#FFEEAD",
+              }}
+              _hover={{
+                color: "#FFEEAD",
+              }}
+              fontSize="14px"
+              lineHeight="24px"
+            >
+              David Bui
+            </Link>
+            <br />
+            <Link
+              fontFamily="Space Mono, Monospace"
+              color="#FFEEAD"
+              href="/"
+              _active={{
+                color: "#FFEEAD",
+              }}
+              _hover={{
+                color: "#FFEEAD",
+              }}
+              fontSize="14px"
+              lineHeight="24px"
+            >
+              About
+            </Link>
+            <br />
+            <Link
+              fontFamily="Space Mono, Monospace"
+              color="#EABCFF"
+              href="/minecraft"
+              target="_blank"
+              _active={{
+                color: "#FFEEAD",
+              }}
+              _hover={{
+                color: "#FFEEAD",
+              }}
+              fontSize="14px"
+              lineHeight="24px"
+            >
+              Minecraft
+            </Link>
+            <br />
+            <Link
+              fontFamily="Space Mono, Monospace"
+              color="#EABCFF"
+              href="https://twitter.com/ghosttyped"
+              target="_blank"
+              _active={{
+                color: "#FFEEAD",
+              }}
+              _hover={{
+                color: "#FFEEAD",
+              }}
+              fontSize="14px"
+              lineHeight="24px"
+            >
+              Twitter
+            </Link>
+            <br />
+            <Link
+              fontFamily="Space Mono, Monospace"
+              color="#EABCFF"
+              href="https://www.instagram.com/ghosttyped/"
+              _active={{
+                color: "#FFEEAD",
+              }}
+              _hover={{
+                color: "#FFEEAD",
+              }}
+              fontSize="14px"
+              lineHeight="24px"
+            >
+              Instagram
+            </Link>
+          </Box>
+          <Box marginTop={["32px", "32px", "0", "0"]}>
+            <Text
+              fontFamily="Space Mono, Monospace"
+              color="#EABCFF"
+              fontSize="14px"
+              lineHeight="26px"
+              marginBottom="0px"
+            >
+              About Me
+            </Text>
+            <Text
+              fontFamily="Space Mono, Monospace"
+              color="#ffffff"
+              fontSize="14px"
+              lineHeight="24px"
+              marginTop="1px"
+            >
+              Hi! I’m David and this is my personal website. I currently live in
+              New York City. I also make art sometimes. Thanks for coming by!
+            </Text>
+          </Box>
+        </Flex>
+      </Box>
+    </ChakraProvider>
   );
 }

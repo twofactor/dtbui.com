@@ -11,6 +11,7 @@
     "@chakra-ui/react": "^1.1.6",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@fontsource/space-mono": "^4.5.0",
     "feather-icons": "^4.28.0",
     "framer-motion": ">=3.0.0",
     "lodash": "^4.17.20",
