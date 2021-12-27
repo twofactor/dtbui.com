@@ -132,7 +132,7 @@ export default function Home() {
           <Box marginTop={["32px", "32px", "0", "0"]}>
             <Text
               fontFamily="Space Mono, Monospace"
-              color="#EABCFF"
+              color="#BCDAFF"
               fontSize="14px"
               lineHeight="26px"
               marginBottom="0px"
