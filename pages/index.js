@@ -146,8 +146,7 @@ export default function Home() {
               lineHeight="24px"
               marginTop="1px"
             >
-              Hi! I’m David and this is my personal website. I currently live in
-              New York City. I also make art sometimes. Thanks for coming by!
+              Hi! I’m David and this is my personal website.
             </Text>
           </Box>
         </Flex>
