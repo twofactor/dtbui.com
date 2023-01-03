@@ -147,7 +147,7 @@ export default function Home() {
               marginTop="1px"
             >
               Hi! I’m David and this is my personal website.
-              </Text>
+            </Text>
           </Box>
         </Flex>
       </Box>
