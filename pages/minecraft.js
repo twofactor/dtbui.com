@@ -55,8 +55,8 @@ export default function Minecraft() {
           padding="16px"
         >
           <Text color="white" fontWeight="bold">
-            Puffercraft is moving to a new server! Check out Turtle Bay. The old
-            server map is still archived for those who want it.
+            Puffercraft has moved on to a new server! Check out Turtle Bay. The
+            old PufferCraft map is still archived for those who want it.
             <Button
               size="sm"
               borderRadius="12px"
