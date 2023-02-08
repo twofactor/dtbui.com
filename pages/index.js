@@ -33,6 +33,7 @@ export default function Home() {
       </Head>
 
       <CSSReset />
+
       <Box
         width="100%"
         backgroundColor="#002451"

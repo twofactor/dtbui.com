@@ -35,15 +35,43 @@ export default function Minecraft() {
         <meta property="og:url" content="https://www.dtbui.com/minecraft" />
       </Head>
       <CSSReset />
+      {/* Alert to show to migrate to new server */}
+
       <Box
         zIndex="1000"
         width="100%"
         backgroundColor="rgba(255, 255, 255, 0.94)"
         borderBottom="1px solid"
         borderBottomColor="gray.100"
-        height="60px"
         position="fixed"
       >
+        <Box
+          width="100%"
+          backgroundColor="red.500"
+          height="60px"
+          alignItems="center"
+          justifyContent="center"
+          display="flex"
+          padding="16px"
+        >
+          <Text color="white" fontWeight="bold">
+            Puffercraft is moving to a new server! Check out Turtle Bay. The old
+            server map is still archived for those who want it.
+            <Button
+              size="sm"
+              borderRadius="12px"
+              boxShadow="sm"
+              colorScheme="purple"
+              border="1px solid"
+              borderColor="purple.600"
+              as="a"
+              href="https://www.turtlebay.xyz"
+              target="_blank"
+            >
+              Join Turtle Bay
+            </Button>
+          </Text>
+        </Box>
         <Flex
           paddingLeft="32px"
           paddingRight="32px"
@@ -51,6 +79,7 @@ export default function Minecraft() {
           margin="auto"
           maxWidth="960px"
           alignItems="center"
+          padding="16px"
         >
           <Link href="/minecraft">
             <Code fontWeight="bold">PufferCraft</Code>
