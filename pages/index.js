@@ -83,7 +83,7 @@ export default function Home() {
             <Link
               fontFamily="Space Mono, Monospace"
               color="#EABCFF"
-              href="/minecraft"
+              href="https://www.turtlebay.xyz/"
               target="_blank"
               _active={{
                 color: "#FFEEAD",
@@ -139,6 +139,15 @@ export default function Home() {
               marginBottom="0px"
             >
               About Me
+            </Text>
+            <Text
+              fontFamily="Space Mono, Monospace"
+              color="#ffffff"
+              fontSize="14px"
+              lineHeight="24px"
+              marginTop="1px"
+            >
+              Hi! I’m David and this is my personal website.
             </Text>
             <Text
               fontFamily="Space Mono, Monospace"
