@@ -100,23 +100,6 @@ export default function Home() {
             <Link
               fontFamily="Space Mono, Monospace"
               color="#EABCFF"
-              href="https://twitter.com/ghosttyped"
-              target="_blank"
-              _active={{
-                color: "#FFEEAD",
-              }}
-              _hover={{
-                color: "#FFEEAD",
-              }}
-              fontSize="14px"
-              lineHeight="24px"
-            >
-              Twitter
-            </Link>
-            <br />
-            <Link
-              fontFamily="Space Mono, Monospace"
-              color="#EABCFF"
               href="https://www.instagram.com/ghosttyped/"
               _active={{
                 color: "#FFEEAD",
